@@ -1,7 +1,7 @@
 /**
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
- *
+ * ############### ALTS BT DNCS 23-11-10
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
  *
@@ -60,7 +60,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Drew, SV05)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Drew, SV05 DNCS 23-11-10)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -1901,7 +1901,7 @@
  * For information about this sensor https://github.com/markniu/Bed_Distance_sensor
  * Uses I2C port, so it requires I2C library markyue/Panda_SoftMasterI2C.
  */
-//#define BD_SENSOR
+//#define BD_SENSOR // 23-11-10 senr here
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
