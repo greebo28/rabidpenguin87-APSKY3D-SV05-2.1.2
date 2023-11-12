@@ -1,7 +1,7 @@
 /**
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
-//  * ############### ALTS BT DNCS 23-11-10 23-11-12 PIDs #### ???? for bed & level ###########
+//  * ############### ALTS BT DNCS 23-11-10 23-11-12b PIDs Esteps #### ???? for bed & level ###########
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
  *
@@ -135,7 +135,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "marlin 2.1.2 SV05 DNCS 23-11-12"
+#define CUSTOM_MACHINE_NAME "marlin 2.1.2 SV05 DNCS 23-11-12b" // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -1168,7 +1168,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 415 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 447.95153 } // 23-11-12 after calibration - was 417 factory
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
