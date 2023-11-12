@@ -1,7 +1,7 @@
 /**
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
- * ############### ALTS BT DNCS 23-11-10 ???? for bed & level ###########
+//  * ############### ALTS BT DNCS 23-11-10 23-11-12 PIDs #### ???? for bed & level ###########
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
  *
@@ -135,7 +135,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "A3D 2.1.2v0.2 SV05 DNCS 23-11-10"
+#define CUSTOM_MACHINE_NAME "marlin 2.1.2 SV05 DNCS 23-11-12"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -663,13 +663,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST { 21.73, 21.73 } //23-11-10 was {  22.20,  22.20 }
-    #define DEFAULT_Ki_LIST {  1.54,  1.54 } //23-11-10 was {   1.08,   1.08 }
-    #define DEFAULT_Kd_LIST { 76.55, 76.55 } //23-11-10 was { 114.00, 114.00 }
+    #define DEFAULT_Kp_LIST { 36.0, 36.0 } //23-11-12
+    #define DEFAULT_Ki_LIST { 4.41,  4.41 } //23-11-12
+    #define DEFAULT_Kd_LIST { 73.5,  73.5 } //23-11-12
   #else
-    #define DEFAULT_Kp 21.73 //23-11-10 was 22.20
-    #define DEFAULT_Ki  1.54 //23-11-10 was 1.08
-    #define DEFAULT_Kd 76.55 //23-11-10 was 114.00
+    #define DEFAULT_Kp 36.0 //23-11-12 after running PID tune
+    #define DEFAULT_Ki  4.41 //23-11-12 after running PID tune
+    #define DEFAULT_Kd 73.5 //23-11-12 after running PID tune
   #endif
 #endif
 
@@ -752,9 +752,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 110.38 //23-11-10 was 10.00
-  #define DEFAULT_bedKi   6.12 //23-11-10 was .023
-  #define DEFAULT_bedKd 497.3  //23-11-10 was 305.4
+  #define DEFAULT_bedKp 212.10 //23-11-12 after running PID tune
+  #define DEFAULT_bedKi  40.78 //23-11-12 after running PID tune
+  #define DEFAULT_bedKd 735.20  //23-11-12 after running PID tune
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -2098,7 +2098,7 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) } // ???? try z as 20*60
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (20*60) } // 23/11/12 tring z as 20*60 was 4*60
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
